@@ -10,5 +10,8 @@
     "mongoose": "^8.7.2",
     "nodemailer": "^6.9.15",
     "otp-generator": "^4.0.1"
+  },
+  "scripts":{
+    "start": "node index.js"
   }
 }

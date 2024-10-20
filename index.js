@@ -7,17 +7,16 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+const PORT = process.env.PORT || 3100
 
-// app.use(express.static('uploads'));
+
+
 app.use(express.urlencoded({ extended: true })); 
 app.use(cors());
-// const User=require('./models/users');
+
 
 app.use(bodyParser.json());
-// const uploadDir = path.join(__dirname, 'uploads');
-// if (!fs.existsSync(uploadDir)) {
-//     fs.mkdirSync(uploadDir);
-// }
+
 
 
 //mongoes connection
@@ -33,7 +32,7 @@ app.use(bodyParser.json());
 
 
 
-app.listen(3100,()=>{
+app.listen(PORT,()=>{
     console.log('listening on 3100');
 })
 
