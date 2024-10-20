@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 3100
+const DATABASE_URL =process.env.DATABASE_URL;
 
 
 
@@ -21,7 +22,7 @@ app.use(bodyParser.json());
 
 //mongoes connection
  async function main(){
-    await mongoose.connect("mongodb+srv://niranjanmourya000:System123@cluster0.pzm4dcy.mongodb.net/jobsapp")
+    await mongoose.connect(DATABASE_URL)
  }
  main()
 .then(()=>{
